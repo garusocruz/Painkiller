@@ -6,6 +6,10 @@ authors = ["Garuso Cruz <garusotec@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+fastapi = "^0.100.0"
+prisma = "^0.9.1"
+uvicorn = "^0.23.1"
+
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.3.0"
