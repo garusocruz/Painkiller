@@ -4,6 +4,10 @@ version = "v0.0.1"
 description = "A BackEnd Software Engineer challenger for a job position at A3Data"
 authors = ["Garuso Cruz <garusotec@gmail.com>"]
 
+packages = [
+    { include = "scripts/*.py" },
+]
+
 [tool.poetry.dependencies]
 python = "^3.9"
 fastapi = "^0.100.0"
@@ -14,6 +18,9 @@ uvicorn = "^0.23.1"
 [tool.poetry.group.dev.dependencies]
 black = "^22.3.0"
 ipdb = "^0.13.13"
+
+[tool.poetry.scripts]
+patients = "scripts.applications:patients_api"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
