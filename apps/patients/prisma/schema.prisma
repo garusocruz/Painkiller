@@ -1,13 +1,14 @@
 // database
 datasource db {
   provider = "sqlite"
-  url      = "file:database.db"
+  url      = "file:database.patient_db"
 }
 
 // generator
 generator client {
   provider             = "prisma-client-py"
   recursive_type_depth = 5
+  output   = "../../clients/patient"
 }
 
 model Patient {
