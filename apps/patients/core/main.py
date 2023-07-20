@@ -9,4 +9,9 @@ app = FastAPI(
 
 @app.get('/')
 def index() -> dict:
+    """index view method
+
+    Returns:
+        dict: with a sample message
+    """
     return {"message":'Wellcome to a PainKiller Patients BackEnd Challenger, please visit http://localhost:8000/docs'}
