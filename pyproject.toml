@@ -21,7 +21,9 @@ ipdb = "^0.13.13"
 
 [tool.poetry.scripts]
 patients = "scripts.applications:patients_api"
+measurement = "scripts.applications:measurement_api"
 migrate_patients = "scripts.prisma:migrate_patients"
+migrate_measurement = "scripts.prisma:migrate_measurement"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
