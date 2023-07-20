@@ -7,6 +7,7 @@ from ..routers.v1.PatientsRouter import router as patient_router
 
 
 app = FastAPI(
+    docs_url="/",
     title="PainKiller - Patients",
 )
 prisma = Prisma(auto_register=True)
@@ -26,15 +27,3 @@ async def shutdown() -> None:
     """Ends DB connection"""
     if prisma.is_connected():
         await prisma.disconnect()
-
-
-@app.get("/")
-def index() -> dict:
-    """index view method
-
-    Returns:
-        dict: with a sample message
-    """
-    return {
-        "message": "Wellcome to a PainKiller Patients BackEnd Challenger, please visit http://localhost:8000/docs"
-    }
