@@ -12,7 +12,7 @@ def migrate_patient() -> None:
     prisma migrate dev
     """
 
-    shcmd(f"prisma migrate dev --schema=apps/patient/prisma/schema.prisma")
+    shcmd(f"prisma migrate dev --schema=src/apps/patient/prisma/schema.prisma")
 
 
 def migrate_measurement() -> None:
@@ -23,4 +23,4 @@ def migrate_measurement() -> None:
     prisma migrate dev
     """
 
-    shcmd(f"prisma migrate dev --schema=apps/measurement/prisma/schema.prisma")
+    shcmd(f"prisma migrate dev --schema=src/apps/measurement/prisma/schema.prisma")

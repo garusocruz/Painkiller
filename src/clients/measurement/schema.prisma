@@ -1,0 +1,19 @@
+// database
+datasource db {
+  provider = "sqlite"
+  url      = "file:database.measurement_db"
+}
+
+// generator
+generator client {
+  provider             = "prisma-client-py"
+  recursive_type_depth = 5
+  output   = "../../../clients/measurement"
+}
+
+model Measurement {
+  measurement_id String @id @default(uuid())
+  patient_id     String
+  blood_pressure Float
+  temperature    String
+}

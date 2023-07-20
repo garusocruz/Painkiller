@@ -12,7 +12,7 @@ def patient_api() -> None:
     poetry run patients
     """
 
-    shcmd(f"uvicorn apps.patient.core.main:app --reload")
+    shcmd(f"uvicorn src.apps.patient.core.main:app --reload")
 
 
 def measurement_api() -> None:
@@ -23,4 +23,4 @@ def measurement_api() -> None:
     poetry run measurements
     """
 
-    shcmd(f"uvicorn apps.measurement.core.main:app --reload --port 8001")
+    shcmd(f"uvicorn src.apps.measurement.core.main:app --reload --port 8001")
