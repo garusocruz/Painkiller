@@ -1,10 +1,10 @@
 """
 Patient Service module put all business logic inside of this file
 """
-from apps.patients.models.patient import PatientModel
-from apps.patients.schemas.pydantic.patient import PostPatientSchema
-from apps.patients.utils.uuid import generate_uuid
-from apps.patients.interfaces.app import get_orm
+from apps.patient.models.patient import PatientModel
+from apps.patient.schemas.pydantic.patient import PostPatientSchema
+from apps.patient.utils.uuid import generate_uuid
+from apps.patient.interfaces.app import get_orm
 
 
 class PatientService:

@@ -1,7 +1,7 @@
 """Module used to mix Prisma and Fast Api in one Class Object
 """
 from fastapi import FastAPI
-from apps.patients.database.prisma_orm import PrismaORM
+from apps.patient.database.prisma_orm import PrismaORM
 
 
 class AppInterface:

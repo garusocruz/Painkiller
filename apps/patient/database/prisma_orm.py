@@ -4,7 +4,7 @@ prisma orm module all configurations from prisma ORM
 import asyncio
 from prisma import Prisma
 
-from apps.patients.interfaces.db import DBInterface
+from apps.patient.interfaces.db import DBInterface
 
 
 class PrismaORM(DBInterface):

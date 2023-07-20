@@ -1,7 +1,7 @@
 """PatientSchema is an interface with Pydantic layer and Patient Prisma ORM Model
 """
 from typing import Optional
-from apps.patients.models.patient import PatientModel
+from apps.patient.models.patient import PatientModel
 
 
 class PostPatientSchema(PatientModel):
