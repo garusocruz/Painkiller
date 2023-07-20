@@ -52,7 +52,13 @@ poetry install
 `Starting a Patients fast api server application`
 
 ```shellscript
-poetry run patients
+poetry run patient
+```
+
+---
+
+```shellscript
+poetry run measurement
 ```
 
 </details>
@@ -62,7 +68,13 @@ poetry run patients
 `Trigger a job to apply DB migrations`
 
 ```shellscript
-poetry run migrate_patients
+poetry run migrate_patient
+```
+
+---
+
+```shellscript
+poetry run migrate_measurement
 ```
 
 </details>
