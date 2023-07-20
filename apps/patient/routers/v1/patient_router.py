@@ -13,7 +13,7 @@ router = APIRouter(prefix="/v1/patients", tags=["patient"])
 service = PatientService()
 
 
-@router.post("/api/v1/patient", response_model=PatientModel)
+@router.post("/", response_model=PatientModel)
 async def create(patient: PostPatientSchema) -> PatientModel:
     """create method, trigger a DB query instruction to create a new Patient row
 
@@ -27,7 +27,7 @@ async def create(patient: PostPatientSchema) -> PatientModel:
     return await service.create(patient)
 
 
-@router.get("/api/v1/patient/{patient_id}", response_model=PatientModel)
+@router.get("/{patient_id}", response_model=PatientModel)
 async def read_by_id(patient_id: str):
     """read_by_id method, trigger ap DN query instruction to fetch patient row according a patient_id
 
