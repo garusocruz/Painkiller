@@ -11,11 +11,15 @@ prisma = Prisma(auto_register=True)
 
 @app.on_event("startup")
 async def startup() -> None:
+    """Start DB connection
+    """
     await prisma.connect()
 
 
 @app.on_event("shutdown")
 async def shutdown() -> None:
+    """Ends DB connection
+    """
     if prisma.is_connected():
         await prisma.disconnect()
 
