@@ -37,6 +37,16 @@ pip install poetry
 
 </details>
 <details>
+  <summary>Install project dependencies</summary>
+
+`Install project dependencies using poetry`
+
+```shellscript
+poetry install
+```
+
+</details>
+<details>
   <summary>Starting applications</summary>
 
 `Starting a Patients fast api server application`
