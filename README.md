@@ -36,3 +36,13 @@ pip install poetry
 ```
 
 </details>
+<details>
+  <summary>Starting applications</summary>
+
+`Starting a Patients fast api server application`
+
+```shellscript
+poetry run patients
+```
+
+</details>
