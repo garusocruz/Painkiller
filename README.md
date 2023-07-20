@@ -46,3 +46,13 @@ poetry run patients
 ```
 
 </details>
+<details>
+  <summary>Run DB migrations</summary>
+
+`Trigger a job to apply DB migrations`
+
+```shellscript
+poetry run migrate_patients
+```
+
+</details>
