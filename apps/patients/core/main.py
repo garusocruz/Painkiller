@@ -2,7 +2,7 @@
 main module all configurations from fast api application
 """
 from ..interfaces.app import get_app, get_orm
-from ..routers.v1.PatientsRouter import router as patient_router
+from ..routers.v1.patients_router import router as patient_router
 
 DB = get_orm()
 app = get_app()
