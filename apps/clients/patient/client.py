@@ -70,7 +70,7 @@ __all__ = (
 
 log: logging.Logger = logging.getLogger(__name__)
 
-SCHEMA_PATH = Path('/home/garusotec/projects/Painkiller/apps/patients/prisma/schema.prisma')
+SCHEMA_PATH = Path('/home/garusotec/projects/Painkiller/apps/patient/prisma/schema.prisma')
 PACKAGED_SCHEMA_PATH = Path(__file__).parent.joinpath('schema.prisma')
 ENGINE_TYPE: EngineType = EngineType.binary
 BINARY_PATHS = BinaryPaths.parse_obj({'queryEngine': {'debian-openssl-3.0.x': '/home/garusotec/.cache/prisma-python/binaries/4.15.0/8fbc245156db7124f997f4cecdd8d1219e360944/node_modules/prisma/query-engine-debian-openssl-3.0.x'}, 'introspectionEngine': {}, 'migrationEngine': {}, 'libqueryEngine': {}, 'prismaFmt': {}})
