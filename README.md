@@ -49,7 +49,7 @@ poetry install
 <details>
   <summary>Starting applications</summary>
 
-`Starting a Patients fast api server application`
+`Starting a fast api server application`
 
 ```shellscript
 poetry run patient
