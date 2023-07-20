@@ -3,7 +3,7 @@ Measurement Service module put all business logic inside of this file
 """
 from apps.measurement.models.measurement_model import MeasurementModel
 from apps.measurement.schemas.pydantic.measurement_schema import PostMeasurementSchema
-from apps.measurement.utils.uuid import generate_uuid
+from apps.utils.uuid import generate_uuid
 from apps.measurement.interfaces.app import get_orm
 
 
