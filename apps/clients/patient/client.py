@@ -469,7 +469,7 @@ class Prisma:
     def _default_datasource(self) -> DatasourceOverride:
         return {
             'name': 'db',
-            'url': OptionalValueFromEnvVar(**{'value': 'file:database.db', 'fromEnvVar': None}).resolve(),
+            'url': OptionalValueFromEnvVar(**{'value': 'file:database.patient_db', 'fromEnvVar': None}).resolve(),
         }
 
 

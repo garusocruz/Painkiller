@@ -1,7 +1,7 @@
 // database
 datasource db {
   provider = "sqlite"
-  url      = "file:database.db"
+  url      = "file:database.patient_db"
 }
 
 // generator
