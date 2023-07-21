@@ -4,7 +4,6 @@ import uuid
 from pydantic import UUID4
 
 
-@staticmethod
 def generate_uuid() -> UUID4:
     """generate a UUID4
 
