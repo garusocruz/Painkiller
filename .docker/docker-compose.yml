@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  painkiller-patient:
+    build:
+      context: ../
+      dockerfile: .docker/patient/Dockerfile
+
+    volumes:
+      - ..:/app
+    ports:
+      - "8000:8000"
+  painkiller-measurement:
+    build:
+      context: ../
+      dockerfile: .docker/measurement/Dockerfile
+
+    volumes:
+      - ..:/app
+    ports:
+      - "8001:8001"
+    # Use this when needs to debug
+    # stdin_open: true
+    # tty: true
