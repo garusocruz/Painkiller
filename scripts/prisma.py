@@ -24,3 +24,25 @@ def migrate_measurement() -> None:
     """
 
     shcmd(f"prisma migrate dev --schema=src/apps/measurement/prisma/schema.prisma")
+
+
+def client_patient() -> None:
+    """
+    The function create prisma client to patient app
+    following example:
+
+    prisma generate
+    """
+
+    shcmd(f"prisma generate --schema=src/apps/patient/prisma/schema.prisma")
+
+
+def client_measurement() -> None:
+    """
+    The function create prisma client to measurement app
+    following example:
+
+    prisma generate
+    """
+
+    shcmd(f"prisma generate --schema=src/apps/measurement/prisma/schema.prisma")
