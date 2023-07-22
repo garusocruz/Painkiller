@@ -1,0 +1,20 @@
+[run]
+branch = True
+omit =
+    *__init__*
+    *sh
+    *test*
+    src/clients/*
+    scripts/*
+    sample/*
+    src/apps/patient/core/main.py
+
+source = .
+
+[report]
+fail_under = 70
+ignore_errors = False
+show_missing = True
+
+[html]
+directory = coverage
