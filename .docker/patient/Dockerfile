@@ -13,14 +13,14 @@ RUN apt-get update -y && apt-get install -y -- \
 
 COPY ./poetry.toml poetry.toml
 COPY ./pyproject.toml pyproject.toml
+COPY ./pytest.ini pytest.ini
 COPY ./scripts scripts
 COPY ./src/apps/patient src/apps/patient
 
 RUN pip install poetry
-RUN pip install ipdb
 RUN poetry install
 
-ENV PORT=8001
-EXPOSE 8001
+ENV PORT=8000
+EXPOSE 8000
 
 CMD sh scripts/run_patient.sh
