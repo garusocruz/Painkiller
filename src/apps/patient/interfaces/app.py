@@ -1,7 +1,7 @@
 """Module used to mix Prisma and Fast Api in one Class Object
 """
 from fastapi import FastAPI
-from src.apps.patient.databases.prisma_orm import PrismaORM
+from src.clients.patient.client import Prisma
 
 
 class AppInterface:
@@ -9,7 +9,7 @@ class AppInterface:
 
     def __init__(self) -> None:
         """Initialize prisma and fast api properties"""
-        self.prisma = PrismaORM()
+        self.prisma = Prisma()
         self.fast_api = FastAPI(docs_url="/", title="PainKiller - Patients")
 
 
@@ -25,7 +25,7 @@ def get_app() -> FastAPI:
     return _SERVER.fast_api
 
 
-def get_orm() -> PrismaORM:
+def get_orm() -> Prisma:
     """Used to export Prisma instance
 
     Returns:
