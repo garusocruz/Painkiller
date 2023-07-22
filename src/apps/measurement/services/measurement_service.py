@@ -1,11 +1,11 @@
 """
 Measurement Service module put all business logic inside of this file
 """
+from src.utils.uuid import generate_uuid
 from src.clients.measurement.models import Measurement
-from src.apps.measurement.schemas.pydantic.measurement_schema import (
+from src.apps.measurement.schemas.measurement_schema import (
     PostMeasurementSchema,
 )
-from src.utils.uuid import generate_uuid
 from src.apps.measurement.interfaces.app import get_orm
 
 
@@ -14,7 +14,7 @@ class MeasurementService:
 
     def __init__(self) -> None:
         """Initializing Prisma ORM"""
-        self.orm = get_orm().orm
+        self.orm = get_orm()
 
     async def create(self, measurement: PostMeasurementSchema) -> Measurement:
         """Create a Measurement
