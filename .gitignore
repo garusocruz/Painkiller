@@ -161,3 +161,6 @@ cython_debug/
 
 # local db files
 **/*_db**
+
+# prisma local clients
+src/clients/
