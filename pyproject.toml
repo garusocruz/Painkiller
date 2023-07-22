@@ -23,10 +23,13 @@ coverage = "^7.2.7"
 pytest = "^7.4.0"
 
 [tool.poetry.scripts]
-patient = "scripts.applications:patient_api"
-measurement = "scripts.applications:measurement_api"
-migrate_patient = "scripts.prisma:migrate_patient"
+coverage = "scripts.applications:coverage"
+docker_up = "scripts.applications:docker_up"
+client_measurement = "scripts.prisma:client_measurement"
 migrate_measurement = "scripts.prisma:migrate_measurement"
+patient = "scripts.applications:patient_api"
+client_patient = "scripts.prisma:client_patient"
+migrate_patient = "scripts.prisma:migrate_patient"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
