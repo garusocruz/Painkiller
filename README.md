@@ -1,6 +1,6 @@
 # Painkiller
 
-This test is designed to assess the technical skills of the candidate for the Senior Software Engineer role in areas such as backend development at A3Data company.
+[This test](https://github.com/Painkiller-AI/painkiller-eng-software-challenge/tree/main) is designed to assess the technical skills of the candidate for the Senior Software Engineer role in areas such as backend development at A3Data company.
 
 ---
 
@@ -9,17 +9,22 @@ This test is designed to assess the technical skills of the candidate for the Se
 ---
 
 <details>
-  <summary>Create a virtual environment</summary>
+  <summary>Check docker compose</summary>
 
-`Create a virtual env`
+It's very important to check if you already can use a docker compose command.
+More info :[here](https://docs.docker.com/compose/install/):
+
+</details>
+<details>
+  <summary>Create a virtual environment</summary>
 
 ```shellscript
 python -m venv .venv
 ```
 
----
-
-`load a virtual environment`
+</details>
+<details>
+  <summary>load a virtual environment</summary>
 
 ```shellscript
 source .venv/bin/activate
@@ -27,9 +32,7 @@ source .venv/bin/activate
 
 </details>
 <details>
-  <summary>Install poetry</summary>
-
-`Install poetry package manager`
+  <summary>Install poetry package manager</summary>
 
 ```shellscript
 pip install poetry
@@ -39,8 +42,6 @@ pip install poetry
 <details>
   <summary>Install project dependencies</summary>
 
-`Install project dependencies using poetry`
-
 ```shellscript
 poetry install
 ```
@@ -49,32 +50,25 @@ poetry install
 <details>
   <summary>Starting applications</summary>
 
-`Starting a fast api server application`
-
 ```shellscript
-poetry run patient
-```
-
----
-
-```shellscript
-poetry run measurement
+poetry run docker_up
 ```
 
 </details>
 <details>
-  <summary>Run DB migrations</summary>
-
-`Trigger a job to apply DB migrations`
+  <summary>Run coverage</summary>
 
 ```shellscript
-poetry run migrate_patient
-```
-
----
-
-```shellscript
-poetry run migrate_measurement
+poetry run coverage
 ```
 
 </details>
+
+---
+
+**`For more poetry commands please visit:`**
+
+- [applications cmds](https://github.com/garusocruz/Painkiller/blob/main/scripts/applications.py)
+- [prisma cmds](https://github.com/garusocruz/Painkiller/blob/main/scripts/prisma.py)
+
+---
