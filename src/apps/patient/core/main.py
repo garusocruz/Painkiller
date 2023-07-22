@@ -12,7 +12,7 @@ app = get_app()
 @app.on_event("startup")
 async def startup() -> None:
     """Start DB connection"""
-    await DB.turn_db_on()
+    await DB.connect()
 
 
 @app.on_event("shutdown")
