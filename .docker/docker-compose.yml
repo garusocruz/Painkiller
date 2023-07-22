@@ -1,6 +1,14 @@
 version: "3"
 
 services:
+  painkiller-coverage:
+    build:
+      context: ../
+      dockerfile: .docker/patient/Dockerfile
+
+    volumes:
+      - ..:/app
+
   painkiller-patient:
     build:
       context: ../
