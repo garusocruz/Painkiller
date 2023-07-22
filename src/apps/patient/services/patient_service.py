@@ -3,7 +3,7 @@ Patient Service module put all business logic inside of this file
 """
 from src.utils.uuid import generate_uuid
 from src.clients.patient.models import Patient
-from src.schemas.post_patienti_schema import PostPatientSchema
+from src.schemas.post_patient_schema import PostPatientSchema
 from src.apps.patient.interfaces.app import get_orm
 
 
