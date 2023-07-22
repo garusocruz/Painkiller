@@ -4,7 +4,7 @@
 """
 from fastapi import APIRouter, Response, status
 from src.clients.patient.models import Patient
-from src.schemas.post_patient_schema import PostPatientSchema
+from src.apps.patient.schemas.post_patient_schema import PostPatientSchema
 from src.apps.patient.services.patient_service import PatientService
 
 router = APIRouter(prefix="/v1/patients", tags=["patient"])
