@@ -12,7 +12,7 @@ class PatientService:
 
     def __init__(self) -> None:
         """Initializing Prisma ORM"""
-        self.orm = get_orm().orm
+        self.orm = get_orm()
 
     async def create(self, patient: PostPatientSchema) -> Patient:
         """Create a Patient
