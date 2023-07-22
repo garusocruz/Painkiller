@@ -43,12 +43,12 @@ async def test_failed_new_patient_without_required_field():
             json={},
         )
 
-    def _asd():
+    def _check_required_field():
         for item in response.json()["detail"]:
             return "msg" in item and "field required" in item["msg"]
 
     assert response.status_code == 422
-    assert _asd()
+    assert _check_required_field()
 
 
 async def test_get_patient_by_id():
