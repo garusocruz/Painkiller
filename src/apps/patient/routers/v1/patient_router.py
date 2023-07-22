@@ -2,14 +2,11 @@
 
     All Patients view is aborded bellow
 """
-from fastapi import Response, status
-from fastapi import APIRouter
-from src.apps.patient.interfaces.app import get_orm
+from fastapi import APIRouter, Response, status
 from src.clients.patient.models import Patient
-from src.apps.patient.schemas.pydantic.patient import PostPatientSchema
-from src.apps.patient.services.patient import PatientService
+from src.schemas.post_patienti_schema import PostPatientSchema
+from src.apps.patient.services.patient_service import PatientService
 
-orm = get_orm()
 router = APIRouter(prefix="/v1/patients", tags=["patient"])
 service = PatientService()
 
