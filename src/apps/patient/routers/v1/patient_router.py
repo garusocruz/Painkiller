@@ -2,6 +2,7 @@
 
     All Patients view is aborded bellow
 """
+from fastapi import Response, status
 from fastapi import APIRouter
 from src.apps.patient.interfaces.app import get_orm
 from src.clients.patient.models import Patient
@@ -14,7 +15,7 @@ service = PatientService()
 
 
 @router.post("/", response_model=Patient)
-async def create(patient: PostPatientSchema) -> Patient:
+async def create(patient: PostPatientSchema, response: Response) -> Patient:
     """create method, trigger a DB query instruction to create a new Patient row
 
     Args:
@@ -24,11 +25,13 @@ async def create(patient: PostPatientSchema) -> Patient:
         Patient: Patient Prisma Model
     """
 
-    return await service.create(patient)
+    patient = await service.create(patient)
+    response.status_code = status.HTTP_201_CREATED
+    return patient
 
 
 @router.get("/{patient_id}", response_model=Patient)
-async def read_by_id(patient_id: str) -> Patient:
+async def read_by_id(patient_id: str):
     """read_by_id method, trigger ap DN query instruction to fetch patient row according a patient_id
 
     Args:
